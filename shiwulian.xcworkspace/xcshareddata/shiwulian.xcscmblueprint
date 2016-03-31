@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "68F669900B70A4448E78FE73ABE95506694381A0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "68F669900B70A4448E78FE73ABE95506694381A0" : 0,
+    "9B3204A8D3160EB3616BC7CB1D3FCCFBB4BF3F2C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1A6F9AEC-A590-4D8F-BB36-D8BE86FF5A7E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "68F669900B70A4448E78FE73ABE95506694381A0" : "github\/",
+    "9B3204A8D3160EB3616BC7CB1D3FCCFBB4BF3F2C" : "github\/CocoaPods\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "shiwulian",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "cDuozi\/APP\/shiwulian\/shiwulian.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pypa\/pip.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "68F669900B70A4448E78FE73ABE95506694381A0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CocoaPods\/CocoaPods.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9B3204A8D3160EB3616BC7CB1D3FCCFBB4BF3F2C"
+    }
+  ]
+}
