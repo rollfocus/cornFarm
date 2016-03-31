@@ -1,20 +1,20 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "68F669900B70A4448E78FE73ABE95506694381A0",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8CCEAA8D16CBCCD9E94C065CD9B88C1AF77ED3D7",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "68F669900B70A4448E78FE73ABE95506694381A0" : 0,
-    "9B3204A8D3160EB3616BC7CB1D3FCCFBB4BF3F2C" : 0
+    "8CCEAA8D16CBCCD9E94C065CD9B88C1AF77ED3D7" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1A6F9AEC-A590-4D8F-BB36-D8BE86FF5A7E",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "68F669900B70A4448E78FE73ABE95506694381A0" : "github\/",
-    "9B3204A8D3160EB3616BC7CB1D3FCCFBB4BF3F2C" : "github\/CocoaPods\/"
+    "68F669900B70A4448E78FE73ABE95506694381A0" : "",
+    "8CCEAA8D16CBCCD9E94C065CD9B88C1AF77ED3D7" : "cornFarm\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "shiwulian",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "cDuozi\/APP\/shiwulian\/shiwulian.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "shiwulian.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pypa\/pip.git",
@@ -22,9 +22,9 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "68F669900B70A4448E78FE73ABE95506694381A0"
     },
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CocoaPods\/CocoaPods.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:rollfocus\/cornFarm.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9B3204A8D3160EB3616BC7CB1D3FCCFBB4BF3F2C"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8CCEAA8D16CBCCD9E94C065CD9B88C1AF77ED3D7"
     }
   ]
 }

@@ -10,12 +10,6 @@
 		ACC133E0F4405FFB898BA2AB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A405115CB6390DCBAB956955 /* libPods.a */; };
 		C93844D41C83F15000782038 /* LLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93844D31C83F15000782038 /* LLNavigationController.m */; };
 		C98EA1771CAA5D0800B9D434 /* LLTickerViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C98EA1761CAA5D0800B9D434 /* LLTickerViewCell.m */; };
-		C98EA18D1CAA7B0000B9D434 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C98EA1831CAA7B0000B9D434 /* blueArrow.png */; };
-		C98EA18E1CAA7B0000B9D434 /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C98EA1841CAA7B0000B9D434 /* blueArrow@2x.png */; };
-		C98EA18F1CAA7B0000B9D434 /* FCXRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C98EA1861CAA7B0000B9D434 /* FCXRefreshBaseView.m */; };
-		C98EA1901CAA7B0000B9D434 /* FCXRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C98EA1881CAA7B0000B9D434 /* FCXRefreshFooterView.m */; };
-		C98EA1911CAA7B0000B9D434 /* FCXRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C98EA18A1CAA7B0000B9D434 /* FCXRefreshHeaderView.m */; };
-		C98EA1921CAA7B0000B9D434 /* UIScrollView+FCXRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C98EA18C1CAA7B0000B9D434 /* UIScrollView+FCXRefresh.m */; };
 		C98EA1941CAB6BFA00B9D434 /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = C98EA1931CAB6BFA00B9D434 /* arrow_right.png */; };
 		C98EA1961CABA73B00B9D434 /* LLRecProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C98EA1951CABA73A00B9D434 /* LLRecProductCell.xib */; };
 		C98EA19A1CABA95A00B9D434 /* forward.png in Resources */ = {isa = PBXBuildFile; fileRef = C98EA1971CABA95A00B9D434 /* forward.png */; };
@@ -36,6 +30,12 @@
 		C98EA2961CACF45700B9D434 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C98EA2951CACF45700B9D434 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C98EA2991CAD0B2C00B9D434 /* DMJson.m in Sources */ = {isa = PBXBuildFile; fileRef = C98EA2981CAD0B2C00B9D434 /* DMJson.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C98EA29B1CAD123800B9D434 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98EA29A1CAD123700B9D434 /* CoreGraphics.framework */; };
+		C98EA2A81CAD4D4D00B9D434 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C98EA29E1CAD4D4D00B9D434 /* blueArrow.png */; };
+		C98EA2A91CAD4D4D00B9D434 /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C98EA29F1CAD4D4D00B9D434 /* blueArrow@2x.png */; };
+		C98EA2AA1CAD4D4D00B9D434 /* FCXRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C98EA2A11CAD4D4D00B9D434 /* FCXRefreshBaseView.m */; };
+		C98EA2AB1CAD4D4D00B9D434 /* FCXRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C98EA2A31CAD4D4D00B9D434 /* FCXRefreshFooterView.m */; };
+		C98EA2AC1CAD4D4D00B9D434 /* FCXRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C98EA2A51CAD4D4D00B9D434 /* FCXRefreshHeaderView.m */; };
+		C98EA2AD1CAD4D4D00B9D434 /* UIScrollView+FCXRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C98EA2A71CAD4D4D00B9D434 /* UIScrollView+FCXRefresh.m */; };
 		C9DDCF471C7FEA9500DB5A56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DDCF461C7FEA9500DB5A56 /* main.m */; };
 		C9DDCF4A1C7FEA9500DB5A56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DDCF491C7FEA9500DB5A56 /* AppDelegate.m */; };
 		C9DDCF551C7FEA9500DB5A56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9DDCF541C7FEA9500DB5A56 /* Assets.xcassets */; };
@@ -91,16 +91,6 @@
 		C93844D31C83F15000782038 /* LLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLNavigationController.m; path = views/baseViews/LLNavigationController.m; sourceTree = "<group>"; };
 		C98EA1751CAA5D0800B9D434 /* LLTickerViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLTickerViewCell.h; path = views/LLTickerViewCell.h; sourceTree = "<group>"; };
 		C98EA1761CAA5D0800B9D434 /* LLTickerViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLTickerViewCell.m; path = views/LLTickerViewCell.m; sourceTree = "<group>"; };
-		C98EA1831CAA7B0000B9D434 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
-		C98EA1841CAA7B0000B9D434 /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
-		C98EA1851CAA7B0000B9D434 /* FCXRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCXRefreshBaseView.h; sourceTree = "<group>"; };
-		C98EA1861CAA7B0000B9D434 /* FCXRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCXRefreshBaseView.m; sourceTree = "<group>"; };
-		C98EA1871CAA7B0000B9D434 /* FCXRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCXRefreshFooterView.h; sourceTree = "<group>"; };
-		C98EA1881CAA7B0000B9D434 /* FCXRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCXRefreshFooterView.m; sourceTree = "<group>"; };
-		C98EA1891CAA7B0000B9D434 /* FCXRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCXRefreshHeaderView.h; sourceTree = "<group>"; };
-		C98EA18A1CAA7B0000B9D434 /* FCXRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCXRefreshHeaderView.m; sourceTree = "<group>"; };
-		C98EA18B1CAA7B0000B9D434 /* UIScrollView+FCXRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+FCXRefresh.h"; sourceTree = "<group>"; };
-		C98EA18C1CAA7B0000B9D434 /* UIScrollView+FCXRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+FCXRefresh.m"; sourceTree = "<group>"; };
 		C98EA1931CAB6BFA00B9D434 /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow_right.png; path = images/arrow_right.png; sourceTree = "<group>"; };
 		C98EA1951CABA73A00B9D434 /* LLRecProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LLRecProductCell.xib; path = views/LLRecProductCell.xib; sourceTree = "<group>"; };
 		C98EA1971CABA95A00B9D434 /* forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = forward.png; path = images/forward.png; sourceTree = "<group>"; };
@@ -328,6 +318,16 @@
 		C98EA2981CAD0B2C00B9D434 /* DMJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMJson.m; sourceTree = "<group>"; };
 		C98EA29A1CAD123700B9D434 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C98EA29C1CAD292A00B9D434 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C98EA29E1CAD4D4D00B9D434 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
+		C98EA29F1CAD4D4D00B9D434 /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
+		C98EA2A01CAD4D4D00B9D434 /* FCXRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCXRefreshBaseView.h; sourceTree = "<group>"; };
+		C98EA2A11CAD4D4D00B9D434 /* FCXRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCXRefreshBaseView.m; sourceTree = "<group>"; };
+		C98EA2A21CAD4D4D00B9D434 /* FCXRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCXRefreshFooterView.h; sourceTree = "<group>"; };
+		C98EA2A31CAD4D4D00B9D434 /* FCXRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCXRefreshFooterView.m; sourceTree = "<group>"; };
+		C98EA2A41CAD4D4D00B9D434 /* FCXRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCXRefreshHeaderView.h; sourceTree = "<group>"; };
+		C98EA2A51CAD4D4D00B9D434 /* FCXRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCXRefreshHeaderView.m; sourceTree = "<group>"; };
+		C98EA2A61CAD4D4D00B9D434 /* UIScrollView+FCXRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+FCXRefresh.h"; sourceTree = "<group>"; };
+		C98EA2A71CAD4D4D00B9D434 /* UIScrollView+FCXRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+FCXRefresh.m"; sourceTree = "<group>"; };
 		C9DDCF421C7FEA9500DB5A56 /* shiwulian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shiwulian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9DDCF461C7FEA9500DB5A56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C9DDCF481C7FEA9500DB5A56 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -441,7 +441,7 @@
 		C93844D11C83F03900782038 /* baseViews */ = {
 			isa = PBXGroup;
 			children = (
-				C98EA1821CAA7B0000B9D434 /* FCXRefreshView */,
+				C98EA29D1CAD4D4D00B9D434 /* FCXRefreshView */,
 				C93844D21C83F15000782038 /* LLNavigationController.h */,
 				C93844D31C83F15000782038 /* LLNavigationController.m */,
 				C9E6E96C1CA29E9000C01CD4 /* LLBaseTableViewCell.h */,
@@ -452,24 +452,6 @@
 				C9E6E9761CA2A91700C01CD4 /* LLBaseTableViewController.m */,
 			);
 			name = baseViews;
-			sourceTree = "<group>";
-		};
-		C98EA1821CAA7B0000B9D434 /* FCXRefreshView */ = {
-			isa = PBXGroup;
-			children = (
-				C98EA1831CAA7B0000B9D434 /* blueArrow.png */,
-				C98EA1841CAA7B0000B9D434 /* blueArrow@2x.png */,
-				C98EA1851CAA7B0000B9D434 /* FCXRefreshBaseView.h */,
-				C98EA1861CAA7B0000B9D434 /* FCXRefreshBaseView.m */,
-				C98EA1871CAA7B0000B9D434 /* FCXRefreshFooterView.h */,
-				C98EA1881CAA7B0000B9D434 /* FCXRefreshFooterView.m */,
-				C98EA1891CAA7B0000B9D434 /* FCXRefreshHeaderView.h */,
-				C98EA18A1CAA7B0000B9D434 /* FCXRefreshHeaderView.m */,
-				C98EA18B1CAA7B0000B9D434 /* UIScrollView+FCXRefresh.h */,
-				C98EA18C1CAA7B0000B9D434 /* UIScrollView+FCXRefresh.m */,
-			);
-			name = FCXRefreshView;
-			path = ../../../../CocoaPods/FCXRefreshView;
 			sourceTree = "<group>";
 		};
 		C98EA1B51CACD73500B9D434 /* Headers */ = {
@@ -831,6 +813,24 @@
 			path = JSONKit;
 			sourceTree = "<group>";
 		};
+		C98EA29D1CAD4D4D00B9D434 /* FCXRefreshView */ = {
+			isa = PBXGroup;
+			children = (
+				C98EA29E1CAD4D4D00B9D434 /* blueArrow.png */,
+				C98EA29F1CAD4D4D00B9D434 /* blueArrow@2x.png */,
+				C98EA2A01CAD4D4D00B9D434 /* FCXRefreshBaseView.h */,
+				C98EA2A11CAD4D4D00B9D434 /* FCXRefreshBaseView.m */,
+				C98EA2A21CAD4D4D00B9D434 /* FCXRefreshFooterView.h */,
+				C98EA2A31CAD4D4D00B9D434 /* FCXRefreshFooterView.m */,
+				C98EA2A41CAD4D4D00B9D434 /* FCXRefreshHeaderView.h */,
+				C98EA2A51CAD4D4D00B9D434 /* FCXRefreshHeaderView.m */,
+				C98EA2A61CAD4D4D00B9D434 /* UIScrollView+FCXRefresh.h */,
+				C98EA2A71CAD4D4D00B9D434 /* UIScrollView+FCXRefresh.m */,
+			);
+			name = FCXRefreshView;
+			path = views/baseViews/FCXRefreshView;
+			sourceTree = "<group>";
+		};
 		C9DDCF391C7FEA9500DB5A56 = {
 			isa = PBXGroup;
 			children = (
@@ -1100,7 +1100,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C98EA1941CAB6BFA00B9D434 /* arrow_right.png in Resources */,
-				C98EA18E1CAA7B0000B9D434 /* blueArrow@2x.png in Resources */,
 				C9E6E9351C9FDD0700C01CD4 /* mine.png in Resources */,
 				C98EA1B41CACC08800B9D434 /* shield.png in Resources */,
 				C9E6E9471CA0E04500C01CD4 /* home.png in Resources */,
@@ -1119,11 +1118,12 @@
 				C9E6E9521CA13EFE00C01CD4 /* basket.png in Resources */,
 				C98EA1A61CABD3C100B9D434 /* 111.png in Resources */,
 				C98EA1A81CABD3C100B9D434 /* 113.png in Resources */,
-				C98EA18D1CAA7B0000B9D434 /* blueArrow.png in Resources */,
 				C9DDCF551C7FEA9500DB5A56 /* Assets.xcassets in Resources */,
 				C9E6E9331C9FDD0700C01CD4 /* dynamic.png in Resources */,
+				C98EA2A81CAD4D4D00B9D434 /* blueArrow.png in Resources */,
 				C9E6E9821CA3CB3C00C01CD4 /* ticker.jpg in Resources */,
 				C98EA1B31CACC08800B9D434 /* level.png in Resources */,
+				C98EA2A91CAD4D4D00B9D434 /* blueArrow@2x.png in Resources */,
 				C98EA1AE1CACBF6400B9D434 /* nongchang001.png in Resources */,
 				C98EA1A21CABD1ED00B9D434 /* trace.png in Resources */,
 				C98EA1AA1CABF8F100B9D434 /* LLRecSectionView.xib in Resources */,
@@ -1201,13 +1201,10 @@
 			files = (
 				C9E6E9771CA2A91700C01CD4 /* LLBaseTableViewController.m in Sources */,
 				C9E6E9701CA29E9000C01CD4 /* LLBaseTableViewCell.m in Sources */,
-				C98EA1921CAA7B0000B9D434 /* UIScrollView+FCXRefresh.m in Sources */,
 				C9E6E9421CA0D7DF00C01CD4 /* LLHomeViewController.m in Sources */,
 				C98EA1771CAA5D0800B9D434 /* LLTickerViewCell.m in Sources */,
 				C9E6E9451CA0D7FB00C01CD4 /* LLMineViewController.m in Sources */,
 				C98EA2991CAD0B2C00B9D434 /* DMJson.m in Sources */,
-				C98EA18F1CAA7B0000B9D434 /* FCXRefreshBaseView.m in Sources */,
-				C98EA1911CAA7B0000B9D434 /* FCXRefreshHeaderView.m in Sources */,
 				C9DDCF4A1C7FEA9500DB5A56 /* AppDelegate.m in Sources */,
 				C9DDCF841C7FECAC00DB5A56 /* LLTabBarController.m in Sources */,
 				C98EA2961CACF45700B9D434 /* JSONKit.m in Sources */,
@@ -1215,14 +1212,17 @@
 				C9E6E9801CA2BE9000C01CD4 /* LLRecSectionView.m in Sources */,
 				C9E6E94B1CA0E16C00C01CD4 /* UIView+ext.m in Sources */,
 				C9E6E95A1CA14F7100C01CD4 /* LLColor.m in Sources */,
-				C98EA1901CAA7B0000B9D434 /* FCXRefreshFooterView.m in Sources */,
 				C9E6E97A1CA2AE1700C01CD4 /* LLRecFarmCell.m in Sources */,
 				C9E6E9711CA29E9000C01CD4 /* LLSearchView.m in Sources */,
 				C9E6E97D1CA2AE6500C01CD4 /* LLRecProductCell.m in Sources */,
+				C98EA2AA1CAD4D4D00B9D434 /* FCXRefreshBaseView.m in Sources */,
 				C93844D41C83F15000782038 /* LLNavigationController.m in Sources */,
 				C9DDCF471C7FEA9500DB5A56 /* main.m in Sources */,
 				C9E6E93F1CA0D7C800C01CD4 /* LLDynamicViewController.m in Sources */,
 				C9E6E94E1CA0F8DC00C01CD4 /* UIImage+ext.m in Sources */,
+				C98EA2AC1CAD4D4D00B9D434 /* FCXRefreshHeaderView.m in Sources */,
+				C98EA2AB1CAD4D4D00B9D434 /* FCXRefreshFooterView.m in Sources */,
+				C98EA2AD1CAD4D4D00B9D434 /* UIScrollView+FCXRefresh.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
