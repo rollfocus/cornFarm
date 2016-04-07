@@ -113,6 +113,11 @@
 }
 
 
+-(void)showAsCircle {
+    self.clipsToBounds = YES;
+    self.layer.cornerRadius = self.frameWidth / 2;
+}
+
 -(void)onTap:(nullable UIView *)view action:(nullable SEL)action {
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:view action:action];
     tap.numberOfTapsRequired = 1;

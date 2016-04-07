@@ -19,8 +19,15 @@
 -(void)setLeftNagbarItem:(NSString *)imageName target:(id)target action:(SEL)action;
 -(void)setRightNagbarItem:(NSString *)imageName target:(id)target action:(SEL)action;
 
+-(void)setLeftNagBarPosX:(CGFloat)pos;
+-(void)setRightNagBarPosX:(CGFloat)pos;
 -(void)setLeftBarItemSize:(CGFloat)width height:(CGFloat)height;
 -(void)setRightBarItemSize:(CGFloat)width height:(CGFloat)height;
 
+-(void)showLeftArrow;
+
+-(void)back;
+
+-(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
 
 @end

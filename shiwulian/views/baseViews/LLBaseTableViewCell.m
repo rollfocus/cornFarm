@@ -8,6 +8,12 @@
 
 #import "LLBaseTableViewCell.h"
 
+@interface LLBaseTableViewCell ()
+
+@property (nonatomic, strong) UIImageView *arrowImage;
+
+@end
+
 @implementation LLBaseTableViewCell
 
 +(CGFloat)cellHeight {
@@ -37,5 +43,17 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
+-(UIImageView *)showRightArrow {
+    if (!_arrowImage) {
+        _arrowImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow_right"]];
+        CGFloat arrowSize = 16.0;
+        _arrowImage.frame = CGRectMake(LL_Screen_Width-10-arrowSize, 10, arrowSize, arrowSize);
+        
+        [self addSubview:_arrowImage];
+        [self bringSubviewToFront:_arrowImage];
+        
+    }
+    return _arrowImage;
+}
 
 @end

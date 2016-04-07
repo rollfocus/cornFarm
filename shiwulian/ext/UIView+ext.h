@@ -31,6 +31,8 @@
 -(void)scaleWidth:(CGFloat)scale;
 -(void)scaleHeight:(CGFloat)scale;
 
+//视图裁剪
+-(void)showAsCircle;
 
 //手势处理
 -(void)onTap:(nullable UIView *)view action:(nullable SEL)action;

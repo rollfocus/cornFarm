@@ -157,10 +157,10 @@ static NSString *farmCellIdentifer = @"farmCellIdentifer";
     barView.backgroundColor = [UIColor clearColor];
 //    barView.backgroundColor = LL_Green;
 
-    CGFloat marginLeft = 10.0;
+    CGFloat marginLeft = 12.0;
     //搜索框
     LLSearchView *searchView = [[LLSearchView alloc] init];
-    searchView.placeText = @"    产品|体验";
+    searchView.placeText = @"    产品|农场";
     [searchView setOriginX:marginLeft];
     [barView addSubview:searchView];
     
@@ -171,9 +171,12 @@ static NSString *farmCellIdentifer = @"farmCellIdentifer";
     basketIconView.frame = CGRectMake([barView maxOriginX]-iconSize-marginLeft,
                                       ([barView frameHeight]-iconSize)/2, iconSize, iconSize);
     scanIconView.frame = basketIconView.frame;
-    [scanIconView setOriginX:([scanIconView originX] - iconSize - 8)];
+    [scanIconView setOriginX:([scanIconView originX] - iconSize - 10)];
+//    scanIconView.originY += 1;
     [scanIconView scaleViewFrame:0.85];
     [basketIconView scaleViewFrame:1.1];
+    [basketIconView scaleHeight:1.2];
+    basketIconView.originY -= 0.5;
     [basketIconView moveY:2.0];
     [barView addSubview:basketIconView];
     [barView addSubview:scanIconView];

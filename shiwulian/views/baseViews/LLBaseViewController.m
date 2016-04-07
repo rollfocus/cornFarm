@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+//    [self showLeftArrow];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,46 +31,22 @@
     nag.barTitle = nagTitle;
 }
 
+
+-(void)showLeftArrow {
+    [self setLeftNagbarItem:@"arrow_left.png" target:self action:@selector(back)];
+}
+
+
 -(void)setLeftNagbarItem:(NSString *)imageName target:(id)target action:(SEL)action {
-//    UIImageView *iconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
-//    iconView.frame = CGRectMake(0, 0, 20, 20);
-//    UIBarButtonItem *barItem = [[UIBarButtonItem alloc] initWithCustomView:iconView];
-//    self.navigationItem.leftBarButtonItem = barItem;
-//    
-//    if (target && action) {
-//        iconView.userInteractionEnabled = YES;
-//        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:target action:action];
-//        tapGesture.numberOfTapsRequired = 1;
-//        tapGesture.numberOfTouchesRequired = 1;
-//        [iconView addGestureRecognizer:tapGesture];
-//    }
-    
     [self setNagBarItem:imageName target:target action:action left:YES];
 }
 
 -(void)setRightNagbarItem:(NSString *)imageName target:(id)target action:(SEL)action {
-//    UIImageView *iconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
-//    iconView.frame = CGRectMake(0, 0, 20, 20);
-//    UIBarButtonItem *barItem = [[UIBarButtonItem alloc] initWithCustomView:iconView];
-//    self.navigationItem.rightBarButtonItem = barItem;
-//    
-//    if (target && action) {
-//        iconView.userInteractionEnabled = YES;
-//        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:target action:action];
-//        tapGesture.numberOfTapsRequired = 1;
-//        tapGesture.numberOfTouchesRequired = 1;
-//        [iconView addGestureRecognizer:tapGesture];
-//    }
-    
     [self setNagBarItem:imageName target:target action:action left:NO];
-
 }
 
 -(void)setNagBarItem:(NSString *)imageName target:(id)target action:(SEL)action left:(BOOL)isLeft {
     UIImageView *iconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
-    iconView.frame = CGRectMake(0, 0, 20, 18);
-    UIBarButtonItem *barItem = [[UIBarButtonItem alloc] initWithCustomView:iconView];
-    
     if (target && action) {
         iconView.userInteractionEnabled = YES;
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:target action:action];
@@ -76,33 +54,46 @@
         tapGesture.numberOfTouchesRequired = 1;
         [iconView addGestureRecognizer:tapGesture];
     }
-
+    iconView.frame = CGRectMake(0, 0, 18, 18);
+    
+    LLNavigationController *nag = (LLNavigationController *)self.navigationController;
     if (isLeft) {
-        self.navigationItem.leftBarButtonItem = barItem;
+        nag.leftItemView = iconView;
     } else {
-        self.navigationItem.rightBarButtonItem = barItem;
+        nag.rightItemView = iconView;
     }
+}
+
+-(void)setLeftNagBarPosX:(CGFloat)pos {
+    LLNavigationController *nag = (LLNavigationController *)self.navigationController;
+    nag.leftItemView.originX = pos;
+}
+
+-(void)setRightNagBarPosX:(CGFloat)pos {
+    LLNavigationController *nag = (LLNavigationController *)self.navigationController;
+    nag.rightItemView.originX = pos;
 }
 
 -(void)setLeftBarItemSize:(CGFloat)width height:(CGFloat)height {
-    [self setBarItemSize:width height:height left:YES];
+    LLNavigationController *nag = (LLNavigationController *)self.navigationController;
+    nag.leftItemView.frameWidth = width;
+    nag.leftItemView.frameHeight = height;
 }
 
 -(void)setRightBarItemSize:(CGFloat)width height:(CGFloat)height {
-    [self setBarItemSize:width height:height left:NO];
+    LLNavigationController *nag = (LLNavigationController *)self.navigationController;
+    nag.rightItemView.frameWidth = width;
+    nag.rightItemView.frameHeight = height;
 }
 
--(void)setBarItemSize:(CGFloat)width height:(CGFloat)height left:(BOOL)isLeft {
-    UIView *iconView = nil;
-    if (isLeft) {
-        iconView = self.navigationItem.leftBarButtonItem.customView;
-    } else {
-        iconView = self.navigationItem.rightBarButtonItem.customView;
-    }
-    
-    iconView.frameWidth = width;
-    iconView.frameHeight = height;
+-(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    LLNavigationController *nag = (LLNavigationController *)self.navigationController;
+    [nag pushViewController:viewController animated:animated];
 }
 
+
+-(void)back {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end

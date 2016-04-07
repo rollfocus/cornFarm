@@ -33,16 +33,12 @@ static NSString *dynItemCellIdentifer = @"dynItemCellIdentifer";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    self.view.backgroundColor = [UIColor redColor];
-    
-//    self.navigationController.navigationBar.translucent = NO;
-//    self.navigationItem.title = @"动态";
     
     self.nagTitle = @"动态";
-    [self setLeftNagbarItem:@"msg.png" target:self action:@selector(gotoMsg)];
+    [self setLeftNagbarItem:@"add.png" target:self action:@selector(gotoMsg)];
     [self setRightNagbarItem:@"scan.png" target:self action:@selector(gotoScan)];
     [self setLeftBarItemSize:18 height:18];
-    [self setRightBarItemSize:16 height:16];
+    [self setRightBarItemSize:18 height:18];
     
     //设置背景
     self.view.backgroundColor = LL_Gray;
@@ -60,14 +56,14 @@ static NSString *dynItemCellIdentifer = @"dynItemCellIdentifer";
     
     [_tableView registerNib:[UINib nibWithNibName:@"LLDynHeadCell" bundle:nil] forCellReuseIdentifier:headCellIdentifer];
     [_tableView registerNib:[UINib nibWithNibName:@"LLDynItemCell" bundle:nil] forCellReuseIdentifier:dynItemCellIdentifer];
-//                                                  LLDynItemCell
 
 }
 
 -(void)gotoMsg {
     NSLog(@">>>>>>>>>>>>>>>>>> goto msg");
-    UIViewController *ctl = [[UIViewController alloc] init];
+    LLBaseViewController *ctl = [[LLBaseViewController alloc] init];
     [self.navigationController pushViewController:ctl animated:YES];
+    [ctl showLeftArrow];
 }
 
 -(void)gotoScan {
@@ -106,8 +102,8 @@ static NSString *dynItemCellIdentifer = @"dynItemCellIdentifer";
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@">>>>>>>>>>>>>>>> select what//");
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@">>>>>>>>>>>>>>>> select %ld, %ld", (long)indexPath.section, (long)indexPath.row);
 }
 
 

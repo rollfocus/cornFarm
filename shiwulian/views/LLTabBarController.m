@@ -67,12 +67,16 @@
     LLNavigationController *dynNag = [[LLNavigationController alloc] initWithRootViewController:dynController];
     LLMineViewController *mineController = [[LLMineViewController alloc] init];
     LLNavigationController *mineNag = [[LLNavigationController alloc] initWithRootViewController:mineController];
+//    UINavigationController *mineNag = [[UINavigationController alloc] initWithRootViewController:[UIViewController new]];
+//    mineNag.navigationBarHidden = YES;
     homeNag.view.frame = contentFtame;
     dynNag.view.frame = contentFtame;
     mineNag.view.frame = contentFtame;
     
     homeNag.delegate = self;
     homeNag.view.autoresizingMask = UIViewAutoresizingNone;
+    dynNag.view.autoresizingMask = UIViewAutoresizingNone;
+    mineNag.view.autoresizingMask = UIViewAutoresizingNone;
 
     [self addChildViewController:homeNag];
     [self addChildViewController:dynNag];
@@ -206,8 +210,11 @@
         
         //跳转controller
         UINavigationController *selectNag = [self.childViewControllers objectAtIndex:index];
-        [self transitionFromViewController:currentController toViewController:selectNag duration:0.1 options:UIViewAnimationOptionTransitionNone animations:nil completion:nil];
+//        [self transitionFromViewController:currentController toViewController:selectNag duration:0.1 options:UIViewAnimationOptionTransitionNone animations:nil completion:nil];
+        [currentController.view removeFromSuperview];
+        [self.view addSubview:selectNag.view];
         currentController = selectNag;
+        
     }
     
     curSelectedIndex = index;

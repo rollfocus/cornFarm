@@ -15,4 +15,6 @@
 
 +(CGFloat)cellHeight;
 
+-(UIImageView *)showRightArrow;
+
 @end

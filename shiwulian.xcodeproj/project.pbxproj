@@ -22,6 +22,10 @@
 		C935096D1CB6067900783FA3 /* LLDynItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C93509681CB6067900783FA3 /* LLDynItemCell.m */; };
 		C935096E1CB6067900783FA3 /* LLDynItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C93509691CB6067900783FA3 /* LLDynItemCell.xib */; };
 		C93509711CB606D700783FA3 /* LLMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93509701CB606D700783FA3 /* LLMineViewController.m */; };
+		C93509731CB63D8900783FA3 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = C93509721CB63D8800783FA3 /* add.png */; };
+		C93509751CB6596200783FA3 /* arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = C93509741CB6596200783FA3 /* arrow_left.png */; };
+		C93509791CB659E200783FA3 /* LLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93509771CB659E200783FA3 /* LLLoginViewController.m */; };
+		C935097A1CB659E200783FA3 /* LLLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C93509781CB659E200783FA3 /* LLLoginViewController.xib */; };
 		C93844D41C83F15000782038 /* LLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93844D31C83F15000782038 /* LLNavigationController.m */; };
 		C98EA1941CAB6BFA00B9D434 /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = C98EA1931CAB6BFA00B9D434 /* arrow_right.png */; };
 		C98EA19A1CABA95A00B9D434 /* forward.png in Resources */ = {isa = PBXBuildFile; fileRef = C98EA1971CABA95A00B9D434 /* forward.png */; };
@@ -115,6 +119,11 @@
 		C93509691CB6067900783FA3 /* LLDynItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LLDynItemCell.xib; path = views/dynamic/LLDynItemCell.xib; sourceTree = "<group>"; };
 		C935096F1CB606D700783FA3 /* LLMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLMineViewController.h; path = views/mine/LLMineViewController.h; sourceTree = "<group>"; };
 		C93509701CB606D700783FA3 /* LLMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLMineViewController.m; path = views/mine/LLMineViewController.m; sourceTree = "<group>"; };
+		C93509721CB63D8800783FA3 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add.png; path = images/add.png; sourceTree = "<group>"; };
+		C93509741CB6596200783FA3 /* arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow_left.png; path = images/arrow_left.png; sourceTree = "<group>"; };
+		C93509761CB659E200783FA3 /* LLLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLLoginViewController.h; path = views/mine/LLLoginViewController.h; sourceTree = "<group>"; };
+		C93509771CB659E200783FA3 /* LLLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLLoginViewController.m; path = views/mine/LLLoginViewController.m; sourceTree = "<group>"; };
+		C93509781CB659E200783FA3 /* LLLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LLLoginViewController.xib; path = views/mine/LLLoginViewController.xib; sourceTree = "<group>"; };
 		C93844D21C83F15000782038 /* LLNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLNavigationController.h; path = views/baseViews/LLNavigationController.h; sourceTree = "<group>"; };
 		C93844D31C83F15000782038 /* LLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLNavigationController.m; path = views/baseViews/LLNavigationController.m; sourceTree = "<group>"; };
 		C98EA1931CAB6BFA00B9D434 /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow_right.png; path = images/arrow_right.png; sourceTree = "<group>"; };
@@ -468,14 +477,14 @@
 			isa = PBXGroup;
 			children = (
 				C98EA29D1CAD4D4D00B9D434 /* FCXRefreshView */,
-				C93844D21C83F15000782038 /* LLNavigationController.h */,
-				C93844D31C83F15000782038 /* LLNavigationController.m */,
 				C9E6E96C1CA29E9000C01CD4 /* LLBaseTableViewCell.h */,
 				C9E6E96D1CA29E9000C01CD4 /* LLBaseTableViewCell.m */,
 				C9E6E96E1CA29E9000C01CD4 /* LLSearchView.h */,
 				C9E6E96F1CA29E9000C01CD4 /* LLSearchView.m */,
 				C9E6E9751CA2A91700C01CD4 /* LLBaseTableViewController.h */,
 				C9E6E9761CA2A91700C01CD4 /* LLBaseTableViewController.m */,
+				C93844D21C83F15000782038 /* LLNavigationController.h */,
+				C93844D31C83F15000782038 /* LLNavigationController.m */,
 				C98EA2BE1CB3A11100B9D434 /* LLBaseViewController.h */,
 				C98EA2BF1CB3A11100B9D434 /* LLBaseViewController.m */,
 			);
@@ -944,6 +953,7 @@
 		C9DDCF861C7FEE8700DB5A56 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C93509721CB63D8800783FA3 /* add.png */,
 				C9E6E9461CA0E04500C01CD4 /* home.png */,
 				C9E6E9301C9FDD0700C01CD4 /* dynamic.png */,
 				C9E6E9321C9FDD0700C01CD4 /* mine.png */,
@@ -951,6 +961,7 @@
 				C9E6E9511CA13EFE00C01CD4 /* scan.png */,
 				C9E6E9541CA13F8500C01CD4 /* search.png */,
 				C9E6E9811CA3CB3C00C01CD4 /* ticker.jpg */,
+				C93509741CB6596200783FA3 /* arrow_left.png */,
 				C98EA1931CAB6BFA00B9D434 /* arrow_right.png */,
 				C98EA1971CABA95A00B9D434 /* forward.png */,
 				C98EA1981CABA95A00B9D434 /* location.png */,
@@ -1005,6 +1016,9 @@
 				C935094C1CB5239600783FA3 /* cells */,
 				C935096F1CB606D700783FA3 /* LLMineViewController.h */,
 				C93509701CB606D700783FA3 /* LLMineViewController.m */,
+				C93509761CB659E200783FA3 /* LLLoginViewController.h */,
+				C93509771CB659E200783FA3 /* LLLoginViewController.m */,
+				C93509781CB659E200783FA3 /* LLLoginViewController.xib */,
 			);
 			name = mine;
 			sourceTree = "<group>";
@@ -1135,6 +1149,7 @@
 				C9DDCF581C7FEA9500DB5A56 /* LaunchScreen.storyboard in Resources */,
 				C9E6E9551CA13F8500C01CD4 /* search.png in Resources */,
 				C9E6E9531CA13EFE00C01CD4 /* scan.png in Resources */,
+				C93509731CB63D8900783FA3 /* add.png in Resources */,
 				C98EA1A71CABD3C100B9D434 /* 112.png in Resources */,
 				C98EA1B21CACC08800B9D434 /* cup.png in Resources */,
 				C98EA19B1CABA95A00B9D434 /* location.png in Resources */,
@@ -1146,9 +1161,11 @@
 				C9E6E9521CA13EFE00C01CD4 /* basket.png in Resources */,
 				C98EA1A61CABD3C100B9D434 /* 111.png in Resources */,
 				C98EA1A81CABD3C100B9D434 /* 113.png in Resources */,
+				C935097A1CB659E200783FA3 /* LLLoginViewController.xib in Resources */,
 				C935096C1CB6067900783FA3 /* LLDynHeadCell.xib in Resources */,
 				C9DDCF551C7FEA9500DB5A56 /* Assets.xcassets in Resources */,
 				C935096E1CB6067900783FA3 /* LLDynItemCell.xib in Resources */,
+				C93509751CB6596200783FA3 /* arrow_left.png in Resources */,
 				C9E6E9331C9FDD0700C01CD4 /* dynamic.png in Resources */,
 				C98EA2A81CAD4D4D00B9D434 /* blueArrow.png in Resources */,
 				C93509601CB6064A00783FA3 /* LLRecSectionView.xib in Resources */,
@@ -1240,6 +1257,7 @@
 				C935095D1CB6064A00783FA3 /* LLRecProductCell.m in Sources */,
 				C9E6E9381C9FE02A00C01CD4 /* LLViewController.m in Sources */,
 				C935095B1CB6064A00783FA3 /* LLRecFarmCell.m in Sources */,
+				C93509791CB659E200783FA3 /* LLLoginViewController.m in Sources */,
 				C9E6E94B1CA0E16C00C01CD4 /* UIView+ext.m in Sources */,
 				C93509711CB606D700783FA3 /* LLMineViewController.m in Sources */,
 				C935096D1CB6067900783FA3 /* LLDynItemCell.m in Sources */,
