@@ -20,6 +20,8 @@
 }
 
 -(void)awakeFromNib {
+    [super awakeFromNib];
+    
     //模拟数据
     NSString *jsonStr = @"{\"name\": \"admin\",\"list\": [\"one\",\"two\",\"three\"], \
            \"level\":5}";

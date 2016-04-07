@@ -97,6 +97,10 @@
     bgView.backgroundColor = LL_Gray_Tab;
     [_toolView addSubview:bgView];
     
+    //添加线条
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, bgView.frameWidth, 0.5)];
+    lineView.backgroundColor = LL_Green_Bg;
+//    [bgView addSubview:lineView];
     
     //添加按钮 主页 动态 我的
     CGFloat btnHeight = LL_Tool_Height;

@@ -33,7 +33,7 @@
 
 
 //手势处理
--(void)onTap:(nullable SEL)action target:(nullable UIView *)view ;
+-(void)onTap:(nullable UIView *)view action:(nullable SEL)action;
 
 
 @end

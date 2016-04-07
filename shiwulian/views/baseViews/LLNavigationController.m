@@ -15,6 +15,8 @@
     NSMutableArray *rightBarItems;
     NSInteger titleTag;
     NSString *title;
+    
+    UILabel *titleView;
 }
 @end
 
@@ -50,19 +52,15 @@
 
     self.view.frame = CGRectMake(0, 0, LL_Screen_Width, LL_Screen_Height-LL_Tool_Height);
     self.view.backgroundColor = LL_Gray;
-    self.view.backgroundColor = [UIColor whiteColor];
-
     
-    //覆盖默认视图
-//    [self setNavigationBarHidden:YES];
-    [self setTabBar];
+    //设置导航条背景色
+    //默认绿色
+    self.navigationBar.barTintColor = LL_Green;
     
-//    for (UIViewController *controller in self.viewControllers) {
-//        controller.view .
-//    }
+    [self customBar];
 }
 
--(void)setTabBar {
+-(void)customBar {
     if (_tabBarView) {
         [_tabBarView removeFromSuperview];
     }
@@ -70,55 +68,37 @@
     bgView = [[UIView alloc] initWithFrame:
                              CGRectMake(0, 0, LL_Screen_Width, LL_Status_Height + LL_Nag_Height)];
     bgView.backgroundColor = LL_Green;
-    [self.view addSubview:bgView];
+//    [self.view addSubview:bgView];
     
     
     _tabBarView = [[UIView alloc] initWithFrame:CGRectMake(0, LL_Status_Height, LL_Screen_Width, LL_Nag_Height)];
     _tabBarView.backgroundColor = [UIColor clearColor];
     
-    UILabel *titleView = [[UILabel alloc] initWithFrame:_tabBarView.frame];
+    titleView = [[UILabel alloc] initWithFrame:_tabBarView.frame];
     [titleView setOriginY:0];
+    CGFloat titleWidth = 160.0;
+    titleView.frame = CGRectMake(0, LL_Status_Height, titleWidth, LL_Nag_Height);
+    [titleView setOriginX:(LL_Screen_Width - titleWidth)/2];
     titleView.font = [UIFont systemFontOfSize:15.0];
     titleView.textColor = [UIColor whiteColor];
     titleView.textAlignment = NSTextAlignmentCenter;
     titleView.tag = titleTag;
-    [_tabBarView addSubview:titleView];
+    [self.view addSubview:titleView];
+//    self.navigationItem.titleView = titleView;
     
-    
+//    [_tabBarView addSubview:titleView];
     //默认有左侧返回图标
-    
-    [self.view addSubview:_tabBarView];
-}
-
--(void)setBackGroundColor:(UIColor *)color {
-    bgView.backgroundColor = color;
+//    [self.view addSubview:_tabBarView];
 }
 
 -(void)setTabBarColor:(UIColor *)color {
-    _tabBarView.backgroundColor = color;
+    self.navigationBar.barTintColor = color;
 }
 
--(void)setTabBarTitle:(NSString *)text {
-    UILabel *titleView = [_tabBarView viewWithTag:titleTag];
-    titleView.text = text;
-    
-    title = text;
+-(void)setBarTitle:(NSString *)barTitle {
+    titleView.text = barTitle;
 }
 
-//左侧一个
--(void)setLeftBarItem:(UIImage *)image text:(NSString *)text {
-    //有图片显示图片，没图片显示文字，两个都有拉长显示
-}
-
-//右侧一个
--(void)setRightBarItem:(UIImage *)image text:(NSString *)text {
-    //图片或者文字
-}
-
-//右侧多个
--(void)setRightBarItems:(NSArray *)items {
-    //图片或者文字
-}
 
 -(void)setTabBar:(UIView *)bar {
     if (_tabBarView) {
@@ -128,6 +108,26 @@
     bar.frame = CGRectMake(0, LL_Status_Height, LL_Screen_Width, LL_Nag_Height);
     [self.view addSubview:bar];
 }
+
+
+
+-(void)setBackGroundColor:(UIColor *)color {
+    bgView.backgroundColor = color;
+}
+
+
+-(void)setTabBarTitle:(NSString *)text {
+//    UILabel *titleView = [_tabBarView viewWithTag:titleTag];
+    titleView.text = text;
+    
+    title = text;
+}
+
+//右侧多个
+-(void)setRightBarItems:(NSArray *)items {
+    //图片或者文字
+}
+
 
 //自定义tab窗口
 -(void)setTabBarItem:(UITabBarItem *)tabBarItem {

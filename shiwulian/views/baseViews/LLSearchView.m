@@ -44,7 +44,7 @@
         [self addSubview:inputView];
         [self addSubview:iconView];
         
-        [iconView onTap:@selector(gotoSearch) target:self];
+        [iconView onTap:self action:@selector(gotoSearch)];
     }
     return self;
 }

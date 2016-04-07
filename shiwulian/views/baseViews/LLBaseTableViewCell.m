@@ -14,6 +14,10 @@
     return 10.0;
 }
 
+-(void)awakeFromNib {
+    [self customView];
+}
+
 -(instancetype)init {
     if (self = [super init]) {
         [self customView];
@@ -29,7 +33,7 @@
 }
 
 -(void)customView {
-    self.backgroundColor = LL_Gray;
+//    self.backgroundColor = LL_Gray;
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 

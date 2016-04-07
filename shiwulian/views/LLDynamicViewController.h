@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LLBaseViewController.h"
 
-@interface LLDynamicViewController : UIViewController
+
+@interface LLDynamicViewController : LLBaseViewController
 
 @end

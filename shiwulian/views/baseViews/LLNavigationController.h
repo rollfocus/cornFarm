@@ -13,10 +13,16 @@
 
 @property (nonatomic, strong) UIView *tabBarView;
 
+@property (nonatomic, assign) NSString *barTitle;
+
+-(void)setTabBarColor:(UIColor *)color;
 
 -(void)setTabBar:(UIView *)bar;
--(void)setTabBarTitle:(NSString *)text;
+
+
 
 -(void)setTabBarItem:(UITabBarItem *)tabBarItem;
+
+
 
 @end

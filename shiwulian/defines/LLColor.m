@@ -35,7 +35,7 @@
 }
 
 +(UIColor *)grayTabColor {
-    return [UIColor colorWithRed:180.0/255.0 green:180.0/255.0 blue:180.0/255.0 alpha:0.4];
+    return [UIColor colorWithRed:242.0/255.0 green:242.0/255.0 blue:242.0/255.0 alpha:0.4];
 }
 
 

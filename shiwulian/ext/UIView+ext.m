@@ -113,7 +113,7 @@
 }
 
 
--(void)onTap:(nullable SEL)action target:(nullable UIView *)view {
+-(void)onTap:(nullable UIView *)view action:(nullable SEL)action {
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:view action:action];
     tap.numberOfTapsRequired = 1;
     tap.numberOfTouchesRequired = 1;

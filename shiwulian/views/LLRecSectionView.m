@@ -73,9 +73,6 @@ static CGFloat cellHeight = 32.0;
     [self addSubview:_rightView];
 }
 
--(void)layoutSubviews {
-}
-
 -(void)setTitle:(NSString *)title {
     UILabel *label = [_titleView viewWithTag:1001];
     label.text = title;

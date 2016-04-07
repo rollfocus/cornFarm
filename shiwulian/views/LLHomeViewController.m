@@ -58,83 +58,47 @@ static NSString *farmCellIdentifer = @"farmCellIdentifer";
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor = LL_Gray;
-    
-//    self.edgesForExtendedLayout &= ~UIRectEdgeTop;
     self.edgesForExtendedLayout = UIRectEdgeNone;
-
     
     [self setNagBarView];
     
-    //tiker 视图,改到单元格中
-    tickerHeight = 175.0;
-    _headerView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ticker.jpg"]];
-    _headerView.frame = CGRectMake(0, -tickerHeight, LL_Screen_Width, tickerHeight);
-//    _headerView.contentMode = UIViewContentModeScaleAspectFill;
-    _headerView.backgroundColor = LL_Gray;
-
-
     //创建tableview
     //UITableViewStyleGrouped;//去除粘滞效果
     _tableView = [[UITableView alloc] initWithFrame:
                  CGRectMake(0, 0, self.view.frameWidth, LL_Content_Height) style:UITableViewStyleGrouped];
 //    [_tableView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    _tableView.backgroundColor = LL_White;
+//    _tableView.backgroundColor = LL_Gray;
     _tableView.backgroundColor = LL_Gray;
-    _tableView.backgroundColor = LL_Green_Bg;
-
-
-//    _tableView.contentInset = UIEdgeInsetsMake(tickerHeight, 0, 0, 0);
     _tableView.showsVerticalScrollIndicator = NO;
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    
-    
     [self.view addSubview:_tableView];
-//    [_tableView addSubview:_headerView];
-//    [_tableView insertSubview:_headerView atIndex:0];
-    
-//    [_tableView registerClass:[LLRecProductCell class] forCellReuseIdentifier:tickerCellIdentifer];
-//    [_tableView registerClass:[LLRecProductCell class] forCellReuseIdentifier:productCellIdentifer];
-    [_tableView registerClass:[LLRecFarmCell class] forCellReuseIdentifier:farmCellIdentifer];
-    
     
     [_tableView registerNib:[UINib nibWithNibName:@"LLRecSectionView" bundle:nil] forCellReuseIdentifier:sectionCellIdentifer];
     [_tableView registerNib:[UINib nibWithNibName:@"LLRecProductCell" bundle:nil] forCellReuseIdentifier:productCellIdentifer];
     [_tableView registerNib:[UINib nibWithNibName:@"LLRecFarmCell" bundle:nil] forCellReuseIdentifier:farmCellIdentifer];
 
-
     numP = 1;
-    numF = 1;
+    numF = 3;
     
     //请求home数据并刷新展示
     [self addRefreshView];
-    
-    
-    //下拉可刷新
-//    self.refresh = [YyxHeaderRefresh header];
-//    self.refresh.tableView = _tableView;
-//    CATWEAKSELF
-//    self.refresh.beginRefreshingBlock = ^(YyxHeaderRefresh *refreshView){
-//        [weakSelf dd];
-//    };
-//    
 }
 
 - (void)addRefreshView {
-    
     __weak __typeof(self)weakSelf = self;
     
     //下拉刷新
     headerView = [_tableView addHeaderWithRefreshHandler:^(FCXRefreshBaseView *refreshView) {
         [weakSelf refreshAction];
     }];
+    return;
     
     //上拉加载更多
     footerView = [_tableView addFooterWithRefreshHandler:^(FCXRefreshBaseView *refreshView) {
         [weakSelf loadMoreAction];
     }];
-    
     //自动刷新
     footerView.autoLoadMore = NO;
 }
@@ -142,12 +106,6 @@ static NSString *farmCellIdentifer = @"farmCellIdentifer";
 - (void)refreshAction {
     __weak UITableView *weakTableView = _tableView;
     __weak FCXRefreshHeaderView *weakHeaderView = headerView;
-    
-//    if (isLoading) {
-//        headerView.refreshState = FCXRefreshStateNormal;
-//        return;
-//    }
-//    isLoading = YES;
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         numP += 1;
@@ -163,18 +121,12 @@ static NSString *farmCellIdentifer = @"farmCellIdentifer";
     __weak UITableView *weakTableView = _tableView;
     __weak FCXRefreshFooterView *weakFooterView = footerView;
     
-//    
-//    if (isLoading) {
-//        headerView.refreshState = FCXRefreshStateNormal;
-//        return;
-//    }
-//    isLoading = YES;
-    
     if (numF > 6) {
         [footerView endRefresh];
         return;
     }
     
+    //简单模拟
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         numF += 1;
         [weakTableView reloadData];
@@ -184,7 +136,7 @@ static NSString *farmCellIdentifer = @"farmCellIdentifer";
 }
 
 -(void)dealloc {
-    [_tableView removeObserver:self forKeyPath:@"contentOffset"];
+    //[_tableView removeObserver:self forKeyPath:@"contentOffset"];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -202,6 +154,8 @@ static NSString *farmCellIdentifer = @"farmCellIdentifer";
     //可改变navigation的左右控件 背景色 以及 offset值等来自定义导航条
     
     UIView *barView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, LL_Screen_Width, LL_Nag_Height)];
+    barView.backgroundColor = [UIColor clearColor];
+//    barView.backgroundColor = LL_Green;
 
     CGFloat marginLeft = 10.0;
     //搜索框
@@ -280,7 +234,7 @@ static NSString *farmCellIdentifer = @"farmCellIdentifer";
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    
+        
     UIView *secView = nil;
     if (section == 0) {
         secView = [[LLTickerViewCell alloc] init];
@@ -358,6 +312,7 @@ static NSString *farmCellIdentifer = @"farmCellIdentifer";
     return;
     
     //下拉放大视图
+    CGFloat tickerHeight = 160.0f;
     CGFloat down = - scrollView.contentOffset.y -(tickerHeight);
     if (down < 0) {
         down = 0;
